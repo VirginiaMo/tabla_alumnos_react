@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.fa-search{
+    color:#A5A8B3;
+    position: absolute;
+    margin-left: 2rem;
+    margin-top: 13px;
+    cursor: pointer;
+}
+.buscador{
+    width: 23rem;
+    height: 2.5rem;
+}
+.containerBuscador{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+    margin-left: 5rem;
+}
+input{
+    padding-left: 3rem;
+    margin-left: 1rem;
+}
+.iconoPlaceholder{
+    position: relative;
+
+}
+.containerBuscador p{
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+
+}

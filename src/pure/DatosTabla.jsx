@@ -1,7 +1,8 @@
-import './Tabla.css';
+import './DatosTabla.css';
 import React, {useEffect, useState} from "react";
 
-export default function DatosTabla( { sortBy }){
+export default function DatosTabla( { sortBy, searchBy }){
+
     const[datos, setDatos] = useState([]);
     const[sortedData, setSortedData] = useState([]);
 
@@ -32,7 +33,17 @@ export default function DatosTabla( { sortBy }){
 	return 	(
 		
 		<tbody>
-			{sortedData.map((item, index) => (
+			{sortedData.filter((item)=>{
+				if(searchBy == ""){
+					return item
+				}else if(item.nombre.toLowerCase().includes(searchBy.toLocaleLowerCase())
+					|| item.ciudad.toLowerCase().includes(searchBy.toLocaleLowerCase())
+					|| item.país.toLowerCase().includes(searchBy.toLocaleLowerCase())
+					|| item.email.toLowerCase().includes(searchBy.toLocaleLowerCase())
+					|| item.ciudad.toLowerCase().includes(searchBy.toLocaleLowerCase())){
+					return item
+				}
+			}).map((item, index) => (
 				<tr key={index}>
 				<td>{item.nombre}</td>
 				<td>{item.ciudad}</td>

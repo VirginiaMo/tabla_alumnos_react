@@ -1,10 +1,10 @@
 import { useState } from "react";
-import DatosTabla from '../pure/Tabla';
+import DatosTabla from '../pure/DatosTabla';
 import { Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
 
-export default function TablaOrdenada() {
+export default function TablaOrdenada( { searchText }) {
 
 	const[sortBy, setSortBy] = useState(null); 
 
@@ -30,7 +30,7 @@ export default function TablaOrdenada() {
 	              </tr>
 	            </thead> 
 
-				<DatosTabla sortBy={sortBy} />
+				<DatosTabla sortBy={sortBy} searchBy={searchText} />
 	          </Table>
 			</div>
 	)

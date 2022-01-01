@@ -1,14 +1,11 @@
 
 import './App.css';
-import TablaOrdenada from './component/TablaOrdenada';
-
-
-
+import TablaYBuscador from './component/TablaYBuscador';
 
 function App() {
   return (
     <div className="App">
-<TablaOrdenada />
+          <TablaYBuscador />
     </div>
   );
 }
