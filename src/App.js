@@ -1,11 +1,14 @@
 
 import './App.css';
-import Tabla from './components/TablaAlumnos/Tabla';
+import TablaOrdenada from './component/TablaOrdenada';
+
+
+
 
 function App() {
   return (
     <div className="App">
-     <Tabla />
+<TablaOrdenada />
     </div>
   );
 }
